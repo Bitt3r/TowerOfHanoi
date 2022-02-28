@@ -1,10 +1,9 @@
-package com.company;
-
-
 /**
- * The type Main.
+ * Tower of Hanoi using iteration and recursion
+ * Author: Stefan Radivojevic
  */
-public class Main {
+
+public class TowerOfHanoi {
 
     public static void main(String[] args) {
         hanoiRecursion(3, 'A', 'B', 'C');
@@ -41,7 +40,7 @@ public class Main {
         }
 
         // moveNo is set to 1, while moveNo is less than 2 to the power of number of disks, increment number of moves
-        for (moveNo = 1; moveNo < (Math.pow(2,(numOfDisks))); moveNo++) {
+        for (moveNo = 1; moveNo < (Math.pow(2, (numOfDisks))); moveNo++) {
             //We set destination to be moveNo OR moveNo minus 1 plus 1 modulo of 3,
             //that will determine at what pole in array it should be set
             dest = ((moveNo | (moveNo - 1)) + 1) % 3;
